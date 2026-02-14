@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-200;
+}
+
+body {
+  @apply bg-slate-900 text-slate-100 font-mono;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
+
+/* Typing test specific */
+.character {
+  position: relative;
+  transition: all 150ms ease-out;
+}
+
+.character.correct {
+  @apply text-green-400;
+}
+
+.character.incorrect {
+  @apply text-red-400 bg-red-400 bg-opacity-20;
+}
+
+.character.extra {
+  @apply text-red-500 bg-red-500 bg-opacity-20;
+}
+
+.character.current {
+  @apply bg-opacity-40 bg-blue-400;
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+/* Caret animation */
+.caret {
+  animation: blink 1s ease-in-out infinite;
+  height: 1.2em;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Smooth animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

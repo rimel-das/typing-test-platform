@@ -1,0 +1,30 @@
+{
+  "name": "typing-test-platform",
+  "version": "1.0.0",
+  "description": "Production-ready typing test platform similar to Monkeytype",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend",
+    "dev": "npm run dev --workspace=backend & npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "migrate": "npm run migrate --workspace=backend",
+    "test": "npm test --workspace=backend && npm test --workspace=frontend"
+  },
+  "keywords": [
+    "typing",
+    "test",
+    "wpm",
+    "speed",
+    "monkeytype"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
