@@ -387,3 +387,5 @@ For issues or questions:
 ---
 
 **Built with ❤️ as a production-grade typing test platform**
+#   t y p i n g - t e s t - p l a t f o r m  
+ 
